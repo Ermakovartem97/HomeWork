@@ -1,0 +1,12 @@
+Mercury planet
+Venus planet
+Earth planet
+Moon satellite
+Mars planet
+Phobos satellite
+Deimos satellite
+Jupiter planet
+Saturn planet
+Uranus planet
+Neptune planet
+Pluto tno

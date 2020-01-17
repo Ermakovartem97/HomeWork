@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-9">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Введите имя:</h1>
+<form action="" method="POST">
+    {% if error1 %}
+        <span style="color : red">{{error}}</span><br>
+    {% endif %}
+    <input type="text" name = "username">
+    <button type="submit">Отправить</button><br>
+
+<h1>Введите имя:</h1>
+<form action="" method="GET">
+    {% if error2 %}
+        <span style="color : red">{{error}}</span><br>
+    {% endif %}
+    <input type="text" name = "username">
+    <button type="submit">Отправить</button>
+</form>
+</body>
+</html>
