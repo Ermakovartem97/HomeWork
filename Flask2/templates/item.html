@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>***Название магазина***</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+            <a href="/">
+                <div>интернет-магазин</div>
+                <h2><span>BIG</span>STORE</h2>
+            </a>
+        </div>
+        <div class="col-md-9 logo-cart">
+            <a href="/cart" class="btn btn-outline-success">
+                <i class="fa fa-shopping-cart"></i> Корзина
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    {% for i in nameCategory%}
+                    <a href={{url_for("category", nameCategory = i)}} class="btn btn-outline-dark">{{ i }}</a>
+                    {%endfor%}
+                </form>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <img src="https://avatars.mds.yandex.net/get-mpic/200316/img_id5692644986263094050.jpeg/9hq" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md-9">
+            <h1>Abyssus Mirror</h1>
+            <p class="lead">
+                Описание: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+            </p>
+            <h4>Цена</h4>
+            <div class="detail-price">
+                $59.00
+            </div>
+            <form action="" class="form-inline">
+                <button type="button" class="btn btn-success">Купить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Свойства</h3>
+            <dl class="row">
+                <dt class="col-sm-3">Description lists</dt>
+                <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                <dt class="col-sm-3">Malesuada porta</dt>
+                <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Отзывы</h3>
+            ****
+
+            <h3>Добавить отзыв</h3>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

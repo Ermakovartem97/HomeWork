@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>***Название магазина***</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+            <a href="/">
+                <div>интернет-магазин</div>
+                <h2><span>BIG</span>STORE</h2>
+            </a>
+        </div>
+        <div class="col-md-9 logo-cart">
+            <a href="/" class="btn btn-outline-success">
+                <i class="fa fa-shopping-cart"></i> Корзина
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    {% for i in nameCategory%}
+                    <a href={{url_for("category", nameCategory = i)}} class="btn btn-outline-dark">{{ i }}</a>
+                    {%endfor%}
+                </form>
+            </nav>
+        </div>
+    </div>
+
+
+    <h1>Корзина</h1>
+
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew">
+                </div>
+                <div class="col-xs-4 col-md-6">
+                    <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 row">
+                    <div class="col-xs-6 col-md-6 text-right" style="padding-top: 5px">
+                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <input type="text" class="form-control input-sm" value="1">
+                    </div>
+                    <div class="col-xs-2 col-md-2">
+                        <button type="button" class="btn btn-outline-danger btn-xs">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew">
+                </div>
+                <div class="col-xs-4 col-md-6">
+                    <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+                </div>
+                <div class="col-xs-6 col-md-4 row">
+                    <div class="col-xs-6 col-md-6 text-right" style="padding-top: 5px">
+                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <input type="text" class="form-control input-sm" value="1">
+                    </div>
+                    <div class="col-xs-2 col-md-2">
+                        <button type="button" class="btn btn-outline-danger btn-xs">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="pull-right">
+                <a href="" class="btn btn-outline-secondary pull-right">Актуализировать цену</a>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="pull-left" style="margin: 5px">
+                Итого: <b>$50.00</b>
+            </div>
+            <div class="pull-right" style="margin: 5px">
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputName" class="sr-only">Имя</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Ваше имя">
+                    </div>
+                    <button type="submit" class="btn btn-success">Оплатить</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

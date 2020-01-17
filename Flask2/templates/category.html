@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>***Название магазина***</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+            <a href="/">
+                <div>интернет-магазин</div>
+                <h2><span>BIG</span>STORE</h2>
+            </a>
+        </div>
+        <div class="col-md-9 logo-cart">
+            <a href="/cart" class="btn btn-outline-success">
+                <i class="fa fa-shopping-cart"></i> Корзина
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    {% for i in nameCategorys%}
+                    <a href={{url_for("category", nameCategory = i)}} class="btn btn-outline-dark">{{ i }}</a>
+                    {%endfor%}
+                </form>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <h2>{{nameCategory}}</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-grid3">
+                        <div class="product-image3">
+                            <a href="#">
+                                <img class="pic-1" src="https://avatars.mds.yandex.net/get-mpic/200316/img_id5692644986263094050.jpeg/9hq">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Abyssus</a></h3>
+                            <div class="price">
+                                $63.50
+                                <span>$75.00</span>
+                            </div>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star disable"></li>
+                                <li class="fa fa-star disable"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-grid3">
+                        <div class="product-image3">
+                            <a href="#">
+                                <img class="pic-1" src="https://avatars.mds.yandex.net/get-mpic/200316/img_id5692644986263094050.jpeg/9hq">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Abyssus Mirror</a></h3>
+                            <div class="price">
+                                $43.50
+                            </div>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-grid3">
+                        <div class="product-image3">
+                            <a href="#">
+                                <img class="pic-1" src="https://avatars.mds.yandex.net/get-mpic/200316/img_id5692644986263094050.jpeg/9hq">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Azurues</a></h3>
+                            <div class="price">
+                                $63.50
+                                <span>$75.00</span>
+                            </div>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star disable"></li>
+                                <li class="fa fa-star disable"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-grid3">
+                        <div class="product-image3">
+                            <a href="#">
+                                <img class="pic-1" src="https://avatars.mds.yandex.net/get-mpic/200316/img_id5692644986263094050.jpeg/9hq">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Azurues mini</a></h3>
+                            <div class="price">
+                                $63.50
+                                <span>$75.00</span>
+                            </div>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star disable"></li>
+                                <li class="fa fa-star disable"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <form action="">
+                <div class="form-group">
+                    <label>Цена</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="price_min"  placeholder="от">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="price_max"  placeholder="до">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Производитель</label>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="manufacturer[]" value="1" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Razer
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="manufacturer[]" value="2" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Razer
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="manufacturer[]" value="3" id="defaultCheck3">
+                        <label class="form-check-label" for="defaultCheck3">
+                            Razer
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-success">Искать</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
